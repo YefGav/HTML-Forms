@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">   
+    <title>Html Form</title>
+</head>
+<body>
+    <h1 id="title">GeeksforGeeks Survey Form</h1>
+   
+<form id="survey-form">
+    <div class="form-control">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Enter your age" required><br><br>
+
+        <label for="describe">Which best option describes you?</label>
+        <select name="describe" id="describe">
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <label for="message">Would you recommend this site</label><br>
+        <input type="radio" name="message" value="yes" required>Yes<br>
+        <input type="radio" name="message" value="no">No<br>
+        <input type="radio" name="message" value="maybe">Maybe<br><br>
+        <br><br>
+        
+        <label>Languages and Frameworks known
+            <small>(Check all that apply)</small>
+        </label>
+        <input type="checkbox" name="lenguage" value="yes" required>C<br>
+        <input type="checkbox" name="lenguage" value="no">C++<br>
+        <input type="checkbox" name="lenguage" value="maybe">C#<br>
+        <input type="checkbox" name="lenguage" value="maybe">Java<br>
+        <input type="checkbox" name="lenguage" value="maybe">Python<br>
+        <input type="checkbox" name="lenguage" value="maybe">JavaScript<br>
+        <input type="checkbox" name="lenguage" value="maybe">React<br>
+        <input type="checkbox" name="lenguage" value="maybe">Angular<br>
+        <input type="checkbox" name="lenguage" value="maybe">Django<br>
+        <input type="checkbox" name="lenguage" value="maybe">Spring<br>
+        <br><br>
+        <label for="comment">
+            Any comments or suggestions
+        </label>
+
+        
+        <textarea name="comment" id="comment" 
+            placeholder="Enter your comment here">
+        </textarea>
+
+        <button type="submit" value="submit">
+            Submit
+        </button>
+    </form>
+        
+    </div>    
+</body>
+</html>
