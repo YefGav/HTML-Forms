@@ -1,68 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">   
-    <title>Html Form</title>
+    <title>Formulario de Encuesta GeeksforGeeks</title>
 </head>
 <body>
-    <h1 id="title">GeeksforGeeks Survey Form</h1>
+    <main class="container">
+        <h1 id="title">Formulario de Encuesta GeeksforGeeks</h1>
 
-<form id="survey-form">
-    <div class="form-control">
+        <form id="survey-form">
+            <section class="form-basics">
+                <label for="name">Nombre
+                    <input type="text" id="name" name="name" placeholder="Ingresa tu nombre">
+                </label>
 
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+                <label for="email">Correo electrónico
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+                </label>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+                <label for="age">Edad
+                    <input type="number" id="age" name="age" placeholder="Ingresa tu edad" required>
+                </label>
 
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" placeholder="Enter your age" required><br><br>
+                <label for="describe">¿Qué opción te describe mejor?
+                    <select name="describe" id="describe">
+                        <option value="student">Estudiante</option>
+                        <option value="teacher">Profesor</option>
+                        <option value="other">Otro</option>
+                    </select>
+                </label>
+            </section>
 
-        <label for="describe">Which best option describes you?</label>
-        <select name="describe" id="describe">
-            <option value="student">Student</option>
-            <option value="teacher">Teacher</option>
-            <option value="other">Other</option>
-        </select><br><br>
+            <fieldset class="recommendation">
+                <legend>¿Recomendarías este sitio?</legend>
+                <label class="radio-option">
+                    <input type="radio" name="recommend" value="yes" required>
+                    Sí
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="recommend" value="no">
+                    No
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="recommend" value="maybe">
+                    Tal vez
+                </label>
+            </fieldset>
 
-        <label for="recommend">Would you recommend this site</label><br>
-        <input type="radio" name="recommend" value="yes" required>Yes<br>
-        <input type="radio" name="recommend" value="no">No<br>
-        <input type="radio" name="recommend" value="maybe">Maybe<br><br>
-        <br><br>
-        
-        <label>Languages and Frameworks known
-            <small>(Check all that apply)</small>
-        </label>
-        <input type="checkbox" name="lenguage" value="yes" >C<br>
-        <input type="checkbox" name="lenguage" value="no">C++<br>
-        <input type="checkbox" name="lenguage" value="maybe">C#<br>
-        <input type="checkbox" name="lenguage" value="maybe">Java<br>
-        <input type="checkbox" name="lenguage" value="maybe">Python<br>
-        <input type="checkbox" name="lenguage" value="maybe">JavaScript<br>
-        <input type="checkbox" name="lenguage" value="maybe">React<br>
-        <input type="checkbox" name="lenguage" value="maybe">Angular<br>
-        <input type="checkbox" name="lenguage" value="maybe">Django<br>
-        <input type="checkbox" name="lenguage" value="maybe">Spring<br>
-        <br><br>
-        <label for="comment">
-            Any comments or suggestions
-        </label>
+            <fieldset class="languages">
+                <legend>Lenguajes y Frameworks que conoces <span class="small-text">(Marca todos los que apliquen)</span></legend>
+                <label class="checkbox-option">
+                    <input type="checkbox" name="language" value="C">
+                    C
+                </label>
+                <label class="checkbox-option">
+                    <input type="checkbox" name="language" value="C++">
+                    C++
+                </label>
+                <label class="checkbox-option">
+                    <input type="checkbox" name="language" value="C#">
+                    C#
+                </label>
+                <label class="checkbox-option">
+                    <input type="checkbox" name="language" value="Java">
+                    Java
+                </label>
+                <label class="checkbox-option">
+                    <input type="checkbox" name="language" value="Python">
+                    Python
+                </label>
+                <label class="checkbox-option">
+                    <input type="checkbox" name="language" value="JavaScript">
+                    JavaScript
+                </label>
+                <label class="checkbox-option">
+                    <input type="checkbox" name="language" value="React">
+                    React
+                </label>
+                <label class="checkbox-option">
+                    <input type="checkbox" name="language" value="Angular">
+                    Angular
+                </label>
+                <label class="checkbox-option">
+                    <input type="checkbox" name="language" value="Django">
+                    Django
+                </label>
+                <label class="checkbox-option">
+                    <input type="checkbox" name="language" value="Spring">
+                    Spring
+                </label>
+            </fieldset>
 
-        
-        <textarea name="comment" id="comment" 
-            placeholder="Enter your comment here">
-        </textarea>
+            <section class="comments">
+                <label for="comment">Comentarios o sugerencias
+                    <textarea name="comment" id="comment" placeholder="Ingresa tu comentario aquí"></textarea>
+                </label>
+            </section>
 
-        <button type="submit" value="submit">
-            Submit
-        </button>
-    </form>
-        
-    </div>    
+            <button type="submit" value="submit">Enviar</button>
+        </form>
+    </main>
+    
     <script src="script.js"></script>
 </body>
 </html>
